@@ -1,0 +1,58 @@
+.liquid-glass {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--glass-border-color, var(--glass-border));
+    background:
+        linear-gradient(135deg,
+            var(--glass-highlight-color, rgba(255, 255, 255, 0.10)),
+            var(--glass-tint-color, rgba(255, 255, 255, 0.04)));
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.14),
+        0 8px 32px rgba(4, 12, 30, 0.18);
+    backdrop-filter: blur(var(--glass-blur, 20px)) saturate(140%);
+    -webkit-backdrop-filter: blur(var(--glass-blur, 20px)) saturate(140%);
+}
+
+.liquid-glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at var(--glass-x, 50%) var(--glass-y, 50%),
+            rgba(255, 255, 255, 0.22),
+            transparent 42%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.liquid-glass:hover::before { opacity: 1; }
+
+.liquid-glass--deep {
+    --glass-tint-color: rgba(13, 33, 73, 0.4);
+    --glass-highlight-color: rgba(255, 255, 255, 0.08);
+    --glass-border-color: rgba(255, 255, 255, 0.14);
+    --glass-blur: 16px;
+}
+
+.liquid-glass--teal {
+    --glass-tint-color: rgba(0, 168, 150, 0.45);
+    --glass-highlight-color: rgba(255, 255, 255, 0.18);
+    --glass-border-color: rgba(255, 255, 255, 0.24);
+}
+
+.liquid-glass--orange {
+    --glass-tint-color: rgba(244, 162, 97, 0.5);
+    --glass-highlight-color: rgba(255, 255, 255, 0.22);
+    --glass-border-color: rgba(255, 255, 255, 0.26);
+}
+
+.liquid-glass--light {
+    --glass-tint-color: rgba(255, 255, 255, 0.55);
+    --glass-highlight-color: rgba(255, 255, 255, 0.7);
+    --glass-border-color: rgba(13, 33, 73, 0.08);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        0 8px 30px rgba(13, 33, 73, 0.08);
+}

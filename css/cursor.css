@@ -1,0 +1,51 @@
+@media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+
+    .cursor-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--color-teal);
+        pointer-events: none;
+        z-index: var(--z-cursor);
+        transform: translate(-50%, -50%);
+        transition: opacity 200ms ease;
+        mix-blend-mode: difference;
+    }
+
+    .cursor-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(0, 168, 150, 0.55);
+        pointer-events: none;
+        z-index: var(--z-cursor);
+        transform: translate(-50%, -50%);
+        transition: width 220ms ease, height 220ms ease, border-color 220ms ease, opacity 200ms ease, background 220ms ease;
+    }
+
+    .cursor-ring--active {
+        width: 54px;
+        height: 54px;
+        background: rgba(0, 168, 150, 0.1);
+        border-color: rgba(0, 168, 150, 0.85);
+    }
+
+    .cursor-ring--text {
+        width: 4px;
+        height: 34px;
+        border-radius: 3px;
+        background: var(--color-navy);
+        border-color: transparent;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .cursor-dot, .cursor-ring { display: none; }
+}

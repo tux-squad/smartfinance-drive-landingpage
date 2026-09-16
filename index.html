@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SmartFinance Drive | Marketplace inteligente de vehículos</title>
+<meta name="description" content="SmartFinance Drive conecta compradores y concesionarias con recomendaciones inteligentes, un catálogo unificado de vehículos nuevos y usados, y pre-evaluación crediticia externa." />
+<link rel="icon" type="image/png" href="./assets/logos/mark-color.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/reset.css" />
+<link rel="stylesheet" href="./css/variables.css" />
+<link rel="stylesheet" href="./css/typography.css" />
+<link rel="stylesheet" href="./css/liquid-glass.css" />
+<link rel="stylesheet" href="./css/components.css" />
+<link rel="stylesheet" href="./css/cursor.css" />
+<link rel="stylesheet" href="./css/sections.css" />
+<link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+
+<div class="cursor-dot" data-cursor-dot></div>
+<div class="cursor-ring" data-cursor-ring></div>
+
+<main class="landing-page">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" data-site-header>
+    <div class="site-header__inner">
+        <a class="site-header__brand" href="#home" data-hover>
+            <img src="./assets/logos/mark-white.png" alt="" class="site-header__mark" />
+            <span class="site-header__wordmark">SmartFinance<em>Drive</em></span>
+        </a>
+
+        <nav class="site-header__nav liquid-glass liquid-glass--deep" data-nav>
+            <a href="#home" class="site-header__link site-header__link--active" data-hover data-nav-link data-i18n="nav.home">Inicio</a>
+            <a href="#producto" class="site-header__link" data-hover data-nav-link data-i18n="nav.how">Cómo funciona</a>
+            <a href="#segmentos" class="site-header__link" data-hover data-nav-link data-i18n="nav.segments">Compradores &amp; concesionarias</a>
+            <a href="#precios" class="site-header__link" data-hover data-nav-link data-i18n="nav.pricing">Membresías</a>
+            <a href="#equipo" class="site-header__link" data-hover data-nav-link data-i18n="nav.team">Equipo</a>
+        </nav>
+
+        <div class="site-header__right">
+            <div class="lang-switch liquid-glass liquid-glass--deep" data-hover>
+                <button type="button" class="lang-switch__option" data-lang-option="es">ES</button>
+                <button type="button" class="lang-switch__option" data-lang-option="en">EN</button>
+            </div>
+
+            <span class="magnetic-target">
+                <a href="#cta" class="site-header__cta liquid-glass liquid-glass--teal" data-hover data-liquid-glass data-i18n="nav.cta">Comenzar</a>
+            </span>
+        </div>
+
+        <button class="site-header__burger liquid-glass liquid-glass--deep" type="button" data-drawer-toggle aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span>
+        </button>
+    </div>
+
+    <div class="drawer-backdrop" data-drawer-backdrop></div>
+    <aside class="drawer" data-drawer>
+        <button class="drawer__close" type="button" data-drawer-close aria-label="Cerrar menú">&times;</button>
+        <div class="lang-switch lang-switch--drawer" data-hover>
+            <button type="button" class="lang-switch__option" data-lang-option="es">ES</button>
+            <button type="button" class="lang-switch__option" data-lang-option="en">EN</button>
+        </div>
+        <nav class="drawer__links">
+            <a href="#home" data-drawer-link data-i18n="nav.home">Inicio</a>
+            <a href="#producto" data-drawer-link data-i18n="nav.how">Cómo funciona</a>
+            <a href="#segmentos" data-drawer-link data-i18n="nav.segments">Compradores &amp; concesionarias</a>
+            <a href="#precios" data-drawer-link data-i18n="nav.pricing">Membresías</a>
+            <a href="#equipo" data-drawer-link data-i18n="nav.team">Equipo</a>
+        </nav>
+        <a href="#cta" class="btn btn--warm" data-drawer-link data-i18n="nav.cta">Comenzar</a>
+    </aside>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+    <div class="hero__bg" data-parallax-bg aria-hidden="true"></div>
+    <img src="./assets/logos/mark-white.png" alt="" class="hero__mark" data-parallax-mark aria-hidden="true" />
+
+    <div class="hero__content">
+        <p class="eyebrow eyebrow--light" data-reveal data-i18n="hero.eyebrow">Mercado automotriz · tux-squad</p>
+        <h1 class="hero__title" data-reveal data-i18n="hero.title">Tu próximo auto<br />está más cerca</h1>
+        <p class="hero__subtitle" data-reveal data-i18n="hero.subtitle">
+            Conectamos compradores con concesionarias de vehículos nuevos y usados en un solo lugar.
+        </p>
+
+        <div class="hero__actions" data-reveal>
+            <span class="magnetic-target" data-magnetic data-magnetic-max="16">
+                <a href="#segmentos" class="btn btn--warm" data-hover data-i18n="hero.cta1">Explorar vehículos</a>
+            </span>
+            <span class="magnetic-target" data-magnetic data-magnetic-max="16">
+                <a href="#precios" class="btn btn--outline-light" data-hover data-i18n="hero.cta2">Soy concesionaria</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="hero__meta">
+        <span class="hero__credit" data-i18n="hero.credit">Proyecto académico de Ingeniería de Software</span>
+        <div class="hero__scroll-cue" aria-hidden="true"><span></span></div>
+    </div>
+
+    <div class="hero__transition" aria-hidden="true"></div>
+</section>
+
+<!-- ============ MARQUEE / INTRO ============ -->
+<section class="intro" id="producto">
+    <svg class="intro__wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,90 C240,15 480,10 720,45 C960,80 1200,85 1440,15 L1440,0 L0,0 Z" fill="#EAF6F4"></path>
+    </svg>
+    <div class="intro__glow" aria-hidden="true"></div>
+    <div class="container intro__container">
+        <p class="eyebrow" data-reveal data-i18n="intro.eyebrow">Por qué existimos</p>
+        <h2 class="intro__title" data-reveal data-i18n="intro.title">Un mercado pensado para dos lados del mostrador: quien busca un auto y quien lo vende</h2>
+    </div>
+
+    <div class="marquee" data-marquee aria-hidden="true">
+        <div class="marquee__track">
+            <div class="marquee__group">
+                <span data-i18n="marquee.item1">Vehículos nuevos</span><span class="marquee__dot"></span>
+                <span data-i18n="marquee.item2">Vehículos usados</span><span class="marquee__dot"></span>
+                <span data-i18n="marquee.item3">Recomendación con IA</span><span class="marquee__dot"></span>
+                <span data-i18n="marquee.item4">Pre-evaluación crediticia</span><span class="marquee__dot"></span>
+            </div>
+            <div class="marquee__group">
+                <span data-i18n="marquee.item1">Vehículos nuevos</span><span class="marquee__dot"></span>
+                <span data-i18n="marquee.item2">Vehículos usados</span><span class="marquee__dot"></span>
+                <span data-i18n="marquee.item3">Recomendación con IA</span><span class="marquee__dot"></span>
+                <span data-i18n="marquee.item4">Pre-evaluación crediticia</span><span class="marquee__dot"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROBLEM ACCORDION ============ -->
+<section class="problem" id="problema">
+    <div class="container problem__layout">
+        <div class="problem__content" data-reveal>
+            <p class="eyebrow" data-i18n="problem.eyebrow">El problema</p>
+            <h2 class="section-title problem__title" data-i18n="problem.title">Buscar el auto correcto no debería tomar semanas</h2>
+            <p class="problem__description" data-i18n="problem.description">
+                El proceso actual de búsqueda y comercialización de vehículos está fragmentado.
+            </p>
+            <div class="problem__actions">
+                <span class="magnetic-target" data-magnetic data-magnetic-max="12">
+                    <a href="#solucion" class="btn btn--outline-dark" data-hover data-i18n="problem.cta">Ver la solución</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="accordion" data-accordion>
+            <article class="accordion__item accordion__item--active" data-accordion-item>
+                <button class="accordion__trigger" type="button" data-accordion-trigger aria-expanded="true">
+                    <span data-i18n="accordion.q1">Qué problema existe</span>
+                    <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__body" data-accordion-body>
+                    <p data-i18n="accordion.a1">Existe dificultad para conectar eficientemente las necesidades de los compradores con la oferta disponible.</p>
+                </div>
+            </article>
+
+            <article class="accordion__item" data-accordion-item>
+                <button class="accordion__trigger" type="button" data-accordion-trigger aria-expanded="false">
+                    <span data-i18n="accordion.q2">Cuándo ocurre</span>
+                    <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__body" data-accordion-body>
+                    <p data-i18n="accordion.a2">Durante la búsqueda y evaluación de alternativas.</p>
+                </div>
+            </article>
+
+            <article class="accordion__item" data-accordion-item>
+                <button class="accordion__trigger" type="button" data-accordion-trigger aria-expanded="false">
+                    <span data-i18n="accordion.q3">Dónde ocurre</span>
+                    <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__body" data-accordion-body>
+                    <p data-i18n="accordion.a3">En el proceso de búsqueda, comparación y adquisición.</p>
+                </div>
+            </article>
+
+            <article class="accordion__item" data-accordion-item>
+                <button class="accordion__trigger" type="button" data-accordion-trigger aria-expanded="false">
+                    <span data-i18n="accordion.q4">Quiénes están involucrados</span>
+                    <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__body" data-accordion-body>
+                    <p data-i18n="accordion.a4">Compradores de vehículos nuevos o usados y concesionarias de ambos tipos.</p>
+                </div>
+            </article>
+
+            <article class="accordion__item" data-accordion-item>
+                <button class="accordion__trigger" type="button" data-accordion-trigger aria-expanded="false">
+                    <span data-i18n="accordion.q5">Por qué ocurre</span>
+                    <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__body" data-accordion-body>
+                    <p data-i18n="accordion.a5">Por la cantidad de alternativas en el mercado y la dispersión de la información.</p>
+                </div>
+            </article>
+
+            <article class="accordion__item" data-accordion-item>
+                <button class="accordion__trigger" type="button" data-accordion-trigger aria-expanded="false">
+                    <span data-i18n="accordion.q6">Cuánto impacto genera</span>
+                    <span class="accordion__icon"></span>
+                </button>
+                <div class="accordion__body" data-accordion-body>
+                    <p data-i18n="accordion.a6">Costos de tiempo y esfuerzo para los compradores, y menor velocidad de conversión para las concesionarias.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SOLUTION / LEAN UX STATEMENT ============ -->
+<section class="solution" id="solucion">
+    <div class="container">
+        <div class="solution__card" data-reveal>
+            <p class="eyebrow eyebrow--light" data-i18n="solution.eyebrow">Cómo podríamos</p>
+            <p class="solution__statement" data-i18n="solution.statement">
+                Centralizar la oferta de concesionarios de autos nuevos y usados, y personalizar la recomendación.
+            </p>
+
+            <div class="solution__metrics">
+                <div class="solution__metric">
+                    <strong>35%</strong>
+                    <span data-i18n="solution.metric1">menos tiempo para identificar alternativas dentro de presupuesto</span>
+                </div>
+                <div class="solution__metric">
+                    <strong>25%</strong>
+                    <span data-i18n="solution.metric2">más conversión de prospectos cualificados para concesionarias</span>
+                </div>
+                <div class="solution__metric">
+                    <strong>NPS &gt; 50</strong>
+                    <span data-i18n="solution.metric3">satisfacción objetivo en la experiencia global de búsqueda</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FEATURES SLIDER ============ -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="features__head">
+            <p class="eyebrow" data-reveal data-i18n="features.eyebrow">Lo que incluye la plataforma</p>
+            <h2 class="section-title" data-reveal data-i18n="features.title">Cinco piezas que resuelven la búsqueda y la venta</h2>
+        </div>
+    </div>
+
+    <div class="feature-slider" data-feature-slider>
+        <div class="feature-slider__track" data-feature-track>
+
+            <article class="feature-slide" data-feature-slide>
+                <span class="feature-slide__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+                </span>
+                <h3 data-i18n="feature1.title">Mercado unificado</h3>
+                <p data-i18n="feature1.desc">Catálogo estructurado de autos nuevos y usados, filtrable por tipo, presupuesto y estilo de vida.</p>
+            </article>
+
+            <article class="feature-slide" data-feature-slide>
+                <span class="feature-slide__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="1.8"/><path d="M5.5 16c0-1.8 1.4-3 3-3s3 1.2 3 3M14 9h5M14 13h5"/></svg>
+                </span>
+                <h3 data-i18n="feature3.title">Fichas de inventario a medida</h3>
+                <p data-i18n="feature3.desc">Kilometraje y condición para usados; versiones y promociones de fábrica para nuevos.</p>
+            </article>
+
+            <article class="feature-slide" data-feature-slide>
+                <span class="feature-slide__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6M12 9L6 21M12 9l6 12M4 21h5M15 21h5"/></svg>
+                </span>
+                <h3 data-i18n="feature4.title">Embudo dual: retail y directo</h3>
+                <p data-i18n="feature4.desc">Una ruta guiada para quien necesita orientación y una ruta rápida para quien ya sabe qué busca.</p>
+            </article>
+
+            <article class="feature-slide" data-feature-slide>
+                <span class="feature-slide__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5V11c0 5-3.4 8.4-8 9.5-4.6-1.1-8-4.5-8-9.5V6.5L12 3z"/><path d="M9 12l2 2 4-4"/></svg>
+                </span>
+                <h3 data-i18n="feature5.title">Pre-evaluación crediticia externa</h3>
+                <p data-i18n="feature5.desc">Acorta el ciclo de decisión conectando al comprador con entidades financieras externas.</p>
+            </article>
+
+            <article class="feature-slide" data-feature-slide>
+                <span class="feature-slide__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10M10 19V5M16 19v-7M4 19h16"/></svg>
+                </span>
+                <h3 data-i18n="feature6.title">Panel de gestión B2B</h3>
+                <p data-i18n="feature6.desc">Administración de inventario y analítica diferenciada, con membresía recurrente.</p>
+            </article>
+
+        </div>
+
+        <div class="feature-slider__controls">
+            <button type="button" class="feature-slider__arrow" data-feature-prev aria-label="Anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="feature-slider__dots" data-feature-dots></div>
+            <button type="button" class="feature-slider__arrow" data-feature-next aria-label="Siguiente">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ============ OUTCOMES (stats banner + recommendation) ============ -->
+<section class="outcomes" id="resultados">
+    <div class="outcomes__banner">
+        <video class="outcomes__video" autoplay muted loop playsinline poster="./assets/videos/poster-handover.jpg">
+            <source src="./assets/videos/handover-loop.mp4" type="video/mp4" />
+        </video>
+        <div class="outcomes__banner-overlay"></div>
+        <div class="container outcomes__banner-content">
+            <p class="eyebrow eyebrow--light" data-reveal data-i18n="outcomes.eyebrow">Resultados esperados</p>
+            <div class="outcomes__metrics" data-reveal>
+                <div class="outcomes__metric">
+                    <strong>15%</strong>
+                    <span data-i18n="outcomes.metric1">de prospectos de autos nuevos agenda una prueba de manejo (O01)</span>
+                </div>
+                <div class="outcomes__metric">
+                    <strong>30%</strong>
+                    <span data-i18n="outcomes.metric2">menos tiempo de rotación en inventario de usados (O02)</span>
+                </div>
+                <div class="outcomes__metric">
+                    <strong>&lt;5%</strong>
+                    <span data-i18n="outcomes.metric3">churn mensual combinado de membresías B2B (O03)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container outcomes__recommendation">
+        <div class="outcomes__rec-media" data-reveal>
+            <video class="outcomes__video outcomes__video--rounded" autoplay muted loop playsinline poster="./assets/videos/poster-dealership.jpg">
+                <source src="./assets/videos/dealership-loop.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="outcomes__rec-content" data-reveal>
+            <p class="eyebrow" data-i18n="rec.eyebrow">Una recomendación de SmartFinance Drive</p>
+            <h3 data-i18n="rec.title">Recomendador asistido para compradores exploradores</h3>
+            <p data-i18n="rec.paragraph">Si los compradores indecisos reciben recomendaciones personalizadas, reduciremos el abandono en la fase de descubrimiento inicial.</p>
+            <span class="magnetic-target" data-magnetic data-magnetic-max="14">
+                <a href="#precios" class="btn btn--outline-dark" data-hover data-i18n="rec.cta">Ver membresías para concesionarias</a>
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PRODUCT PREVIEW (static placeholder) ============ -->
+<section class="product-preview" id="producto-preview">
+    <div class="container product-preview__inner">
+        <img src="./assets/logos/full-color.png" alt="SmartFinance Drive" class="product-preview__logo" />
+        <h2 data-reveal data-i18n="product.title">Así se verá SmartFinance Drive por dentro</h2>
+
+        <div class="product-preview__mockup" data-reveal aria-hidden="true">
+            <div class="product-preview__mockup-bar">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="product-preview__mockup-body">
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="6" y="6" width="52" height="52" rx="6"/><path d="M6 20h52M18 6v14"/><circle cx="34" cy="38" r="9"/><path d="M41 45l7 7"/></svg>
+                <span class="product-preview__note" data-i18n="product.note">Vista previa del producto · próximamente</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SEGMENTS (paginated slide) ============ -->
+<section class="segments" id="segmentos">
+    <div class="container segments__head">
+        <p class="eyebrow" data-reveal data-i18n="segments.eyebrow">A quién servimos</p>
+        <h2 class="section-title" data-reveal data-i18n="segments.title">Tres perfiles, un solo mercado</h2>
+        <p class="segments__lede" data-reveal data-i18n="segments.lede">Un lado de la demanda y dos lados de la oferta.</p>
+    </div>
+
+    <div class="container">
+        <div class="segments-pager" data-segments-pager>
+
+            <div class="segments-pager__viewport">
+                <div class="segments-pager__track" data-segments-track>
+
+                    <article class="segments-pager__slide segments-pager__slide--buyers is-active" data-segments-slide>
+                        <div class="segments-pager__text">
+                            <span class="badge badge--teal" data-i18n="seg1.tag">Demanda</span>
+                            <h3 data-i18n="seg1.title">Compradores interesados</h3>
+                            <p class="segments-pager__profile" data-i18n="seg1.profile">24–55 años · NSE A/B/C · principales ciudades del Perú.</p>
+                            <ul>
+                                <li data-i18n="seg1.li1">Compradores que requieren acompañamiento.</li>
+                                <li data-i18n="seg1.li2">Compradores con decisión definida.</li>
+                                <li data-i18n="seg1.li3">Punto de dolor: información desactualizada.</li>
+                            </ul>
+                        </div>
+                        <div class="segments-pager__media">
+                            <img src="./assets/illustrations/segment-buyers.svg" alt="" />
+                        </div>
+                    </article>
+
+                    <article class="segments-pager__slide segments-pager__slide--new" data-segments-slide>
+                        <div class="segments-pager__text">
+                            <span class="badge badge--blue" data-i18n="seg2.tag">Oferta · B2B</span>
+                            <h3 data-i18n="seg2.title">Concesionarias de autos nuevos</h3>
+                            <p class="segments-pager__profile" data-i18n="seg2.profile">Distribuidores autorizados con salones de exhibición físicos.</p>
+                            <ul>
+                                <li data-i18n="seg2.li1">El tráfico presencial se reduce.</li>
+                                <li data-i18n="seg2.li2">Altos costos de captación.</li>
+                                <li data-i18n="seg2.li3">Necesitan prospectos con intención real de compra.</li>
+                            </ul>
+                        </div>
+                        <div class="segments-pager__media">
+                            <img src="./assets/illustrations/segment-new-dealers.svg" alt="" />
+                        </div>
+                    </article>
+
+                    <article class="segments-pager__slide segments-pager__slide--used" data-segments-slide>
+                        <div class="segments-pager__text">
+                            <span class="badge badge--orange" data-i18n="seg3.tag">Oferta · B2B</span>
+                            <h3 data-i18n="seg3.title">Concesionarias de autos usados</h3>
+                            <p class="segments-pager__profile" data-i18n="seg3.profile">Empresas multimarca con patios de 15 a más de 80 unidades.</p>
+                            <ul>
+                                <li data-i18n="seg3.li1">La depreciación golpea el flujo de caja.</li>
+                                <li data-i18n="seg3.li2">Dificultad para transmitir confianza.</li>
+                                <li data-i18n="seg3.li3">Necesitan mayor exposición.</li>
+                            </ul>
+                        </div>
+                        <div class="segments-pager__media">
+                            <img src="./assets/illustrations/segment-used-dealers.svg" alt="" />
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="segments-pager__controls">
+                <button type="button" class="segments-pager__arrow" data-segments-prev aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+                </button>
+                <div class="segments-pager__count"><span data-segments-current>01</span> / <span data-segments-total>03</span></div>
+                <button type="button" class="segments-pager__arrow" data-segments-next aria-label="Siguiente">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PRICING / B2B MEMBERSHIPS ============ -->
+<section class="pricing" id="precios">
+    <div class="container">
+        <div class="pricing__head">
+            <p class="eyebrow" data-reveal data-i18n="pricing.eyebrow">Modelo de negocio</p>
+            <h2 class="section-title" data-reveal data-i18n="pricing.title">Membresías B2B para concesionarias</h2>
+            <p class="pricing__lede" data-reveal data-i18n="pricing.lede">SmartFinance Drive es gratuito para compradores.</p>
+        </div>
+
+        <div class="pricing__grid">
+            <article class="pricing-card" data-reveal>
+                <h3 data-i18n="price1.title">Plan Concesionaria Nueva</h3>
+                <p class="pricing-card__desc" data-i18n="price1.desc">Pensado para distribuidores autorizados de marca.</p>
+                <ul class="pricing-card__features">
+                    <li data-i18n="price1.f1">Ficha de vehículo con versiones y promociones de fábrica</li>
+                    <li data-i18n="price1.f2">Leads con pre-evaluación crediticia incluida</li>
+                    <li data-i18n="price1.f3">Panel de analítica de conversión a test drive</li>
+                </ul>
+            </article>
+
+            <article class="pricing-card pricing-card--highlight" data-reveal>
+                <span class="pricing-card__ribbon" data-i18n="price2.ribbon">Ambos planes</span>
+                <h3 data-i18n="price2.title">Panel de gestión B2B</h3>
+                <p class="pricing-card__desc" data-i18n="price2.desc">Incluido en ambas membresías.</p>
+                <ul class="pricing-card__features">
+                    <li data-i18n="price2.f1">Publicación ilimitada de unidades activas</li>
+                    <li data-i18n="price2.f2">Analítica diferenciada por tipo de vehículo</li>
+                    <li data-i18n="price2.f3">Renovación mensual, sin permanencia forzada</li>
+                </ul>
+            </article>
+
+            <article class="pricing-card" data-reveal>
+                <h3 data-i18n="price3.title">Plan Concesionaria Usada</h3>
+                <p class="pricing-card__desc" data-i18n="price3.desc">Para patios multimarca.</p>
+                <ul class="pricing-card__features">
+                    <li data-i18n="price3.f1">Ficha con kilometraje, condición e historial</li>
+                    <li data-i18n="price3.f2">Mayor exposición para unidades con más días en patio</li>
+                    <li data-i18n="price3.f3">Leads con presupuesto compatible pre-calificado</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TEAM (draggable) ============ -->
+<section class="team" id="equipo">
+    <div class="container team__head">
+        <p class="eyebrow eyebrow--light" data-reveal data-i18n="team.eyebrow">tux-squad</p>
+        <h2 data-reveal data-i18n="team.title">El equipo detrás de SmartFinance Drive</h2>
+        <p class="team__lede" data-reveal data-i18n="team.lede">Seis estudiantes construyendo el mercado de principio a fin. Arrastra para conocer a todo el equipo.</p>
+    </div>
+
+    <div class="team__track" data-drag-track>
+        <article class="team-card">
+            <img class="team-card__photo" src="./assets/team/mauricio.jpg" alt="Mauricio Castillo" />
+            <div class="team-card__info">
+                <h3>Castillo Yataco, Mauricio Sebastian</h3>
+                <span class="team-card__code">U202113229</span>
+                <p data-i18n="member1.role">Backend y lógica de negocios. Responsable del diseño de servicios RESTful.</p>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <img class="team-card__photo" src="./assets/team/sofia.jpeg" alt="Sofia Cotrina" />
+            <div class="team-card__info">
+                <h3>Cotrina Siclla, Sofia Alessandra</h3>
+                <span class="team-card__code">U20231B120</span>
+                <p data-i18n="member2.role">Frontend y diseño en Figma. Aporta soluciones visuales al equipo.</p>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <img class="team-card__photo" src="./assets/team/oliver.jpg" alt="Oliver Jonseck" />
+            <div class="team-card__info">
+                <h3>Jonseck Choque, Oliver</h3>
+                <span class="team-card__code">U202312912</span>
+                <p data-i18n="member3.role">DevOps y Aseguramiento de Calidad. Automatización de pipelines.</p>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <img class="team-card__photo" src="./assets/team/aldo.jpg" alt="Aldo Machacca" />
+            <div class="team-card__info">
+                <h3>Machacca Soto, Aldo Jeanfranco</h3>
+                <span class="team-card__code">U202419485</span>
+                <p data-i18n="member4.role">Full Stack y arquitectura de software.</p>
+            </div>
+        </article>
+
+        <article class="team-card">
+            <img class="team-card__photo" src="./assets/team/jesus.jpg" alt="Jesús Paucar" />
+            <div class="team-card__info">
+                <h3>Paucar Zenteno, Jesús Fernando</h3>
+                <span class="team-card__code">U202316687</span>
+                <p data-i18n="member5.role">Análisis de datos e ingeniería financiera.</p>
+            </div>
+        </article>
+
+        <article class="team-card team-card--placeholder">
+            <div class="team-card__avatar-placeholder team-card__avatar-placeholder--empty">?</div>
+            <div class="team-card__info">
+                <h3 data-i18n="member6.name">[Inserte nombre del integrante]</h3>
+                <span class="team-card__code" data-i18n="member6.code">[Inserte código]</span>
+                <p data-i18n="member6.role">[Inserte una breve descripción de su rol dentro de tux-squad].</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta" id="cta">
+    <div class="container final-cta__inner">
+        <h2 data-reveal data-i18n="finalcta.title">¿Buscas tu próximo auto o quieres vender el tuyo más rápido?</h2>
+        <p data-reveal data-i18n="finalcta.paragraph">SmartFinance Drive une a compradores y concesionarias en un solo mercado.</p>
+        <div class="final-cta__actions" data-reveal>
+            <span class="magnetic-target" data-magnetic data-magnetic-max="16">
+                <a href="#segmentos" class="btn btn--warm" data-hover data-i18n="finalcta.cta1">Explorar vehículos</a>
+            </span>
+            <span class="magnetic-target" data-magnetic data-magnetic-max="16">
+                <a href="#precios" class="btn btn--outline-light" data-hover data-i18n="finalcta.cta2">Afiliar mi concesionaria</a>
+            </span>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container site-footer__grid">
+        <div class="site-footer__col">
+            <a href="#home" class="site-footer__brand">
+                <img src="./assets/logos/mark-white.png" alt="" class="site-footer__mark" />
+                <span class="site-footer__wordmark">SmartFinance<em>Drive</em></span>
+            </a>
+            <p data-i18n="footer.tagline">Un proyecto de <strong>tux-squad</strong>, mercado inteligente de vehículos nuevos y usados.</p>
+        </div>
+
+        <nav class="site-footer__col site-footer__links">
+            <span class="site-footer__col-title" data-i18n="footer.col1Title">Plataforma</span>
+            <a href="#producto" data-i18n="footer.link1">Cómo funciona</a>
+            <a href="#segmentos" data-i18n="footer.link2">Compradores &amp; concesionarias</a>
+            <a href="#precios" data-i18n="footer.link3">Membresías</a>
+            <a href="#resultados" data-i18n="footer.link4">Resultados esperados</a>
+        </nav>
+
+        <nav class="site-footer__col site-footer__links">
+            <span class="site-footer__col-title" data-i18n="footer.col2Title">Startup</span>
+            <a href="#equipo" data-i18n="footer.link5">Equipo</a>
+            <a href="#home" data-i18n="footer.link6">Inicio</a>
+            <a href="#" data-legal="terms" data-i18n="footer.link7">Términos</a>
+            <a href="#" data-legal="privacy" data-i18n="footer.link8">Privacidad</a>
+        </nav>
+
+        <div class="site-footer__col">
+            <span class="site-footer__col-title" data-i18n="footer.col3Title">Síguenos</span>
+            <div class="site-footer__social">
+                <a href="#" aria-label="LinkedIn" data-hover>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.24h4.5V23H.24V8.24zM8.5 8.24h4.32v2.02h.06c.6-1.14 2.07-2.34 4.26-2.34 4.55 0 5.39 3 5.39 6.9V23h-4.5v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23H8.5V8.24z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram" data-hover>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube" data-hover>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-1C17 2.5 12 2.5 12 2.5h-.01s-5 0-8.19.34c-.46.06-1.46.06-2.36 1C.73 4.56.5 6.2.5 6.2S.25 8.12.25 10.05v1.8c0 1.93.25 3.85.25 3.85s.23 1.64.94 2.36c.9.94 2.08.9 2.6 1 1.9.18 8 .24 8 .24s5.01-.01 8.2-.35c.46-.06 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.25-1.92.25-3.85v-1.8c0-1.93-.25-3.85-.25-3.85zM9.6 14.6V7.7l6.4 3.46-6.4 3.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+        <span data-i18n="footer.copyright">© 2026 tux-squad · SmartFinance Drive. Proyecto académico de Ingeniería de Software.</span>
+    </div>
+
+    <div class="legal-drawer" data-legal-drawer hidden>
+        <div class="legal-drawer__backdrop" data-legal-close></div>
+        <aside class="legal-drawer__panel">
+            <button class="legal-drawer__close" data-legal-close aria-label="Cerrar">&times;</button>
+            <div data-legal-content="terms">
+                <h3 data-i18n="legal.termsTitle">Términos de uso</h3>
+                <p data-i18n="legal.termsBody">Contenido de ejemplo para el proyecto académico SmartFinance Drive.</p>
+            </div>
+            <div data-legal-content="privacy" hidden>
+                <h3 data-i18n="legal.privacyTitle">Política de privacidad</h3>
+                <p data-i18n="legal.privacyBody">Contenido de ejemplo para el proyecto académico SmartFinance Drive.</p>
+            </div>
+        </aside>
+    </div>
+</footer>
+
+<script src="./js/i18n.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
